@@ -16,7 +16,7 @@ function App() {
   const [saving, setSaving] = useState(false);
   const [notice, setNotice] = useState({ type: '', text: '' });
 
-  // --- Fetch bookings on every reload/change --- 
+  // --- Fetch bookings once per mount --- 
   useEffect(() => {
     fetch(`${API_URL}/bookings`)
       .then((response) => {
